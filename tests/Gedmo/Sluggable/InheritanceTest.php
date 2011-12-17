@@ -49,6 +49,7 @@ class InheritanceTest extends BaseTestCaseORM
 
         $this->em->persist($audi3);
         $this->em->flush();
+        var_dump($audi2->getSlug());
     }
 
     protected function getUsedEntityFixtures()
