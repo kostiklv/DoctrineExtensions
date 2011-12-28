@@ -203,7 +203,7 @@ abstract class BaseTestCaseORM extends \PHPUnit_Framework_TestCase
      *
      * @return Doctrine\ORM\Configuration
      */
-    private function getMockAnnotatedConfig()
+    protected function getMockAnnotatedConfig()
     {
         $config = $this->getMock('Doctrine\ORM\Configuration');
         $config
