@@ -12,6 +12,18 @@ namespace Gedmo\Multilingual;
 use Doctrine\ORM\Events;
 use Gedmo\Mapping\MappedEventSubscriber;
 
+/*
+    @todo Use field mapping instead of class mapping - if class has one multilingual field - process it
+    @todo Change field mapping of the field to the default locale, i.e. name should be mapped to name_en column
+        because this will simplify things when changing default locale - it will simply read/write to a different
+        field. Original field will not be intact
+
+
+
+
+
+*/
+
 class MultilingualListener extends MappedEventSubscriber
 {
     /**
@@ -54,6 +66,7 @@ class MultilingualListener extends MappedEventSubscriber
                 'length' => 50
             );
             $classMetadata->mapField($fieldMapping);
+            $classMetadata->
         }
     }
 }
